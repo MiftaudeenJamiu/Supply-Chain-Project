@@ -10,12 +10,12 @@
 - [Results and Findings](#results-and-findings)
 - [Conclusions](#conclusions)
 
-### Project OverView
+### Project Overview
 ---
-This project focuses on analyzing key supply chain metrics across product, inventory, shipping, and manufacturing operations. Using Power BI, the dashboard provides visibility into product availability, order fulfillment, lead times, logistics costs, and profitability across different product types and SKUs. The aim is to identify process inefficiencies, track performance across supply nodes, and support data-driven decisions for supply chain planning and optimization.
+This project focuses on analysing key supply chain metrics across product, inventory, shipping, and manufacturing operations. Using Power BI, the dashboard provides visibility into product availability, order fulfilment, lead times, logistics costs, and profitability across different product types and SKUs. The aim is to identify process inefficiencies, track performance across supply nodes, and support data-driven decisions for supply chain planning and optimisation.
 
 ### Data Sources
-The dataset was sourced from Kaggle and includes structured supply chain and logistics information. The dataset covers multiple stages of the supply process — from procurement to delivery and post-inspection.
+The dataset was sourced from Kaggle and includes structured information on supply chain and logistics. The dataset covers multiple stages of the supply process, from procurement to delivery and post-inspection.
 Key Fields in the Dataset:
 - Product Details: Product Type, SKU, Price, Availability, Products Sold, Revenue
 - Inventory & Stock: Stock Levels, Order Quantities, Lead Time, Manufacturing Lead Time
@@ -29,7 +29,7 @@ Key Fields in the Dataset:
 - Power BI: Data Analysis and Visualisation
 
 ### Data Cleaning and Preparation
-The dataset sourced from Kaggle was cleaned using Excel for initial review and Power Query in Power BI for transformation and modeling. The focus was on resolving missing values, normalizing formats, and preparing the data model for analysis across inventory, sales, logistics, and manufacturing components.
+The dataset sourced from Kaggle was cleaned using Excel for initial review and Power Query in Power BI for transformation and modelling. The focus was on resolving missing values, normalising formats, and preparing the data model for analysis across inventory, sales, logistics, and manufacturing components.
 - Initial Review (Excel):
 1. Scanned for blank fields, invalid entries (e.g., negative lead times or costs), and duplicate SKUs.
 2. Checked categorical fields (e.g., product type, carrier) for inconsistent naming.
@@ -38,9 +38,9 @@ The dataset sourced from Kaggle was cleaned using Excel for initial review and P
 1. Replaced missing shipping times, lead times, and inspection results using average or mode values.
 2. Removed rows with critical missing fields (e.g., SKU, product type) that could not be recovered.
 
-- Format Standardization
+- Format Standardisation
 1. Converted date and numeric fields (e.g., lead time, cost, revenue) to proper data types.
-2. Standardized text casing and spacing in product categories, shipping carriers, and inspection statuses.
+2. Standardised text casing and spacing in product categories, shipping carriers, and inspection statuses.
 
 - Derived Columns
 1. Created Profit = Revenue – (MFG Cost + Shipping Cost)
@@ -68,7 +68,7 @@ Reviewed total products sold and revenue by SKU, product type, and consumer demo
 Evaluated manufacturing, shipping, and total costs by SKU and supplier. Flagged items with high cost-to-revenue ratios and reviewed margin volatility.
 - Stock and Inventory
 Assessed stock levels and order quantities across SKUs. Identified products with low inventory but high demand, as well as overstocked low-selling items.
-- Lead Times and Fulfillment
+- Lead Times and Fulfilment
 Analysed average and maximum lead times by SKU to surface slow-moving products and supplier bottlenecks.
 - Quality and Defect Rates
 Explored inspection outcomes and defect percentages across product types and transportation modes. Products with high defects were tagged for deeper review.
@@ -77,7 +77,7 @@ These insights shaped the structure and focus of the dashboard: profit margins, 
 
 ### Visualisation and Reports
 
-The Power BI dashboard was organized across three key report pages: Overview, Product Analysis, and Supplier Analysis.
+The Power BI dashboard was organised across three key report pages: Overview, Product Analysis, and Supplier Analysis.
 - Overview Page
 1. KPI Cards: Total Revenue, Total Products Sold, Total Costs, Average Profit Margin %, Total Stock Level
 2. Segment Analysis: Total Revenue by Consumer Demographics, Total Revenue by Product Type, Total Revenue by Shipping Carrier, Total Revenue by SKU, Average Defect Rate by Product Type
@@ -90,8 +90,8 @@ See the snapshots below for an overview of the Overview Page.
 - Product Analysis Page
 1. Order Quantity vs. SKU: Bar chart comparing sales volume by SKU.
 2. Stock Level vs. SKU: Inventory monitoring to identify overstocked or understocked items.
-3. Lead Time vs. SKU: Highlights fulfillment delays or variability across SKUs.
-4. Avg Profit Margin % by Product Type: Displays profitability at the category level.
+3. Lead Time vs. SKU: Highlights fulfilment delays or variability across SKUs.
+4. Avg Profit Margin% % by Product Type: Displays profitability at the category level.
 5. Scatter Plot – Products Sold by SKU: Helps spot high-selling vs. low-moving products and correlates with inventory and cost patterns.
 See the snapshots below for an overview of the Product Analysis Page.
 
@@ -103,7 +103,7 @@ See the snapshots below for an overview of the Product Analysis Page.
 2. Avg Defect Rate by Transportation Mode: Links shipping methods to quality issues.
 3. Supplier Cost Breakdown: Shows total cost, manufacturing cost, and shipping cost by supplier.
 4. Scatter Plot – Supplier vs. Profit Margin & Defect Rate
-Plots suppliers by total profit margin and defect rate, identifying suppliers that are either profitable or problematic (or both).
+Plot suppliers by total profit margin and defect rate, identifying suppliers that are either profitable or problematic (or both).
 See the snapshots below for an overview of the Supplier Analysis Page.
 
 <img width="1198" height="666" alt="Screenshot 2025-07-11 211843" src="https://github.com/user-attachments/assets/628dd3bb-f480-4e56-b6e4-1fd5c077eb52" />
@@ -112,7 +112,7 @@ See the snapshots below for an overview of the Supplier Analysis Page.
 ### Results and Findings 
 ---
 The dashboard revealed several important patterns:
-- Revenue concentration: A small number of SKUs drive a large share of total revenue. These SKUs also show higher defect rates, indicating risk to high-value inventory.
+- Revenue concentration: A small number of SKUs drive a large share of total revenue. These SKUs also show higher defect rates, indicating a risk to high-value inventory.
 - Low-margin suppliers: Several suppliers have negative or near-zero average profit margins while maintaining high shipping and manufacturing costs.
 - Defect-prone transport modes: Products shipped via specific transportation modes (e.g., air or certain regional carriers) showed consistently higher defect rates.
 - Inventory issues: A mismatch was found between stock levels and order volumes for several SKUs. Some low-demand products are overstocked, while top-selling products face stock shortages and long lead times.
@@ -124,5 +124,5 @@ This supply chain analysis project used Power BI to evaluate performance across 
 The findings support actionable improvements in:
 1. Inventory planning (e.g., balancing stock against demand)
 2. Supplier evaluation (e.g., cutting low-margin, high-defect vendors)
-3. Logistics decisions (e.g., optimizing transportation modes based on defect and cost impact)
+3. Logistics decisions (e.g., optimising transportation modes based on defect and cost impact)
 This end-to-end report provides the operations team with the tools needed to reduce costs, improve margins, and manage supply risk with data-backed decisions
